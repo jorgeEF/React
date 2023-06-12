@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react 1</title>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- agregamos babel para "traducir" react a javascript -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <h1>Agregando un elemento JSX</h1>
+    <div id="principal">
+        
+    </div>
+    <!-- script del JSX, se especifica que babel debe traducir el codigo -->
+    <script type="text/babel">
+        const elemento = <div>
+        <h2>Elemento JSX de React en contenedor</h2>
+        <h3>texto h3 en contenedor</h3>
+        </div>;
+        // crear elemento ROOT como contenedor
+        const contenedor=ReactDOM.createRoot(document.getElementById("principal"));
+        // Asociar elemento dentro del contenedor
+        contenedor.render(elemento);
+    </script>
+    
+</body>
+
+</html>
